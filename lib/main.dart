@@ -1,14 +1,19 @@
-/// main.dart – Entry point of Smart Expense Tracker.
-/// Sets up routes and Material theme.
-
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
+import 'screens/splash_screen.dart';
+import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/add_edit_screen.dart';
 import 'screens/expense_list_screen.dart';
+import 'screens/analytics_screen.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const SmartExpenseApp());
 }
 
@@ -59,11 +64,14 @@ class SmartExpenseApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: {
+        '/': (_) => const SplashScreen(),
+        '/login': (_) => const LoginScreen(),
         '/home': (_) => const HomeScreen(),
         '/add_expense': (_) => const AddEditScreen(),
         '/expense_list': (_) => const ExpenseListScreen(),
+        '/analytics': (_) => const AnalyticsScreen(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/edit_expense') {

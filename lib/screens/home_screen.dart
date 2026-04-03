@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../database/database_helper.dart';
+import '../services/auth_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -59,7 +60,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       children: [
                         // ── Header ────────────────────────────────────────────────────
-                        const SizedBox(height: 40),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            IconButton(
+                              icon: const Icon(Icons.logout, color: Colors.white),
+                              onPressed: () async {
+                                await AuthService.logout();
+                                if (context.mounted) {
+                                  Navigator.pushReplacementNamed(context, '/login');
+                                }
+                              },
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
                         const Icon(
                           Icons.account_balance_wallet,
                           size: 72,
@@ -157,6 +172,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: const Color(0xFF1E88E5),
                                   onTap: () async {
                                     await Navigator.pushNamed(context, '/expense_list');
+                                    _loadSummary();
+                                  },
+                                ),
+                                const SizedBox(height: 16),
+
+                                // Analytics Button
+                                _ActionButton(
+                                  icon: Icons.pie_chart,
+                                  label: 'Analytics',
+                                  subtitle: 'View charts and statistics',
+                                  color: const Color(0xFF42A5F5),
+                                  onTap: () async {
+                                    await Navigator.pushNamed(context, '/analytics');
                                     _loadSummary();
                                   },
                                 ),
