@@ -1,0 +1,42 @@
+﻿Analyzing Smart_expense...                                      
+
+   info - Dangling library doc comment - lib\database\database_helper.dart:1:1 - dangling_library_doc_comments
+   info - Dangling library doc comment - lib\main.dart:1:1 - dangling_library_doc_comments
+   info - Dangling library doc comment - lib\models\expense_model.dart:1:1 - dangling_library_doc_comments
+   info - Dangling library doc comment - lib\screens\add_expense_screen.dart:1:1 - dangling_library_doc_comments
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\add_expense_screen.dart:243:49 - deprecated_member_use
+   info - Dangling library doc comment - lib\screens\analytics_screen.dart:1:1 - dangling_library_doc_comments
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\analytics_screen.dart:157:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\analytics_screen.dart:233:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\analytics_screen.dart:286:34 - deprecated_member_use
+   info - Dangling library doc comment - lib\screens\home_screen.dart:1:1 - dangling_library_doc_comments
+   info - Unnecessary use of multiple underscores - lib\screens\home_screen.dart:251:47 - unnecessary_underscores
+   info - Dangling library doc comment - lib\screens\splash_screen.dart:1:1 - dangling_library_doc_comments
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\splash_screen.dart:82:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\splash_screen.dart:85:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\splash_screen.dart:114:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\splash_screen.dart:127:38 - deprecated_member_use
+   info - Dangling library doc comment - lib\services\expense_service.dart:1:1 - dangling_library_doc_comments
+   info - Dangling library doc comment - lib\widgets\expense_list_tile.dart:1:1 - dangling_library_doc_comments
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\expense_list_tile.dart:89:36 - deprecated_member_use
+   info - Dangling library doc comment - lib\widgets\summary_card.dart:1:1 - dangling_library_doc_comments
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\summary_card.dart:44:40 - deprecated_member_use
+
+flutter : 21 issues 
+found. (ran in 2.3s)
+At line:1 char:1
++ flutter analyze 
+--no-fatal-warnings 2>&1 
+| Out-File -Encoding utf8 
+D: ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (2  
+  1 issues found. (ran    
+ in 2.3s):String) [],     
+RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
